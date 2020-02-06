@@ -1,2 +1,0 @@
-# araraTour
-Created with CodeSandbox
