@@ -13,10 +13,37 @@ class Cabecalho extends Component {
           </a>
 
           <ul className="abas">
-            <li className="abas__aba abas__aba_ativa">
-              <Link to='./'>
-                <div>teste</div>Início
+            <li className="abas__aba">
+              <Link to='./' className="abas__link abas__link_ativo">
+                Início
                 </Link>
+            </li>
+
+            <li className="abas__aba">
+              <div className="dropdown">
+                <Link to='./' className="abas__link">
+                  Pacotes e serviços
+                </Link>
+                <div className="dropdown__container">
+                  <ul className="dropdown__itens">
+                    <li>
+                      <Link to='./' className="dropdown__item">
+                        <img /> Passeios de carros e tals
+                    </Link>
+                    </li>
+                    <li>
+                      <Link to='./' className="dropdown__item">
+                        <img /> Passeios de carros de van e tals
+                    </Link>
+                    </li>
+                    <li>
+                      <Link to='./' className="dropdown__item">
+                        <img /> Passeios de carros e de van e tals
+                    </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </li>
           </ul>
         </nav>

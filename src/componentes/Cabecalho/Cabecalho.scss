@@ -2,7 +2,7 @@
   height: 56px;
   background-color: var(--cor-primaria);
   padding: 0 16px;
-  background-color: white;
+  background-color: var(--cor-branca);
 }
 
 .cabecalho__conteudo {
@@ -18,38 +18,85 @@
   }
 }
 
-.abas {
+@mixin reset-lista {
   display: flex;
   list-style-type: none;
-  height: 100%;
   margin: 0;
   padding: 0;
 }
 
-.abas__aba {
+.abas {
+  @include reset-lista;
   height: 100%;
-  a {
-    padding: 0 16px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 14px;
-    letter-spacing: 1px;
-    color: var(--cor-primaria);
-    &:hover,
-    &:focus {
-      background-color: var(--cor-primaria);
-      color: white;
+}
+
+.abas__link {
+  padding: 0 16px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  color: var(--cor-primaria);
+  &:hover,
+  &:focus {
+    background-color: var(--cor-primaria-20);
+  }
+}
+
+.abas__link_ativo {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branca);
+  &:hover,
+  &:focus {
+    @extend .abas__link_ativo;
+  }
+}
+
+.dropdown {
+  position: relative;
+  height: 100%;
+  &:hover,
+  &:focus {
+    .dropdown__container {
+      display: flex;
     }
   }
 }
 
-.abas__aba_ativa {
-  a {
-    background-color: var(--cor-primaria);
-    color: white;
+.dropdown__container {
+  position: absolute;
+  top: calc(100% - 8px);
+  left: 0;
+  padding-top: 8px;
+  width: 100%;
+  display: none;
+}
+
+.dropdown__itens {
+  @include reset-lista;
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid var(--cor-secundaria);
+}
+
+.dropdown__item {
+  background-color: var(--cor-primaria);
+  display: flex;
+  height: 40px;
+  padding: 0 16px;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--cor-branca);
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  white-space: nowrap;
+  &:hover,
+  &:focus {
+    background-color: var(--cor-primaria-escura);
   }
 }
