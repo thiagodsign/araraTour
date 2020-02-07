@@ -12,15 +12,11 @@ class Cabecalho extends Component {
             <img src={logo} className="cabecalho__logo" />
           </a>
 
-          <ul className="Abas">
-            <li className="Abas__aba Abas__aba_ativa">
-              <Link to='./'>Início</Link>
-            </li>
-            <li className="Abas__aba">
-              <Link to='./'>Início</Link>
-            </li>
-            <li className="Abas__aba">
-              <Link to='./'>Início</Link>
+          <ul className="abas">
+            <li className="abas__aba abas__aba_ativa">
+              <Link to='./'>
+                <div>teste</div>Início
+                </Link>
             </li>
           </ul>
         </nav>

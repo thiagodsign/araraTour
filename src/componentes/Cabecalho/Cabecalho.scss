@@ -18,7 +18,7 @@
   }
 }
 
-.Abas {
+.abas {
   display: flex;
   list-style-type: none;
   height: 100%;
@@ -26,7 +26,7 @@
   padding: 0;
 }
 
-.Abas__aba {
+.abas__aba {
   height: 100%;
   a {
     padding: 0 16px;
@@ -47,7 +47,7 @@
   }
 }
 
-.Abas__aba_ativa {
+.abas__aba_ativa {
   a {
     background-color: var(--cor-primaria);
     color: white;
