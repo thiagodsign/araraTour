@@ -78,7 +78,8 @@
   height: 100%;
   z-index: 1;
   &:hover,
-  &:focus {
+  &:focus,
+  &:focus-within {
     .dropdown__container {
       display: flex;
     }
