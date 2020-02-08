@@ -20,7 +20,7 @@ class App extends Component {
 
         <Switch>
           <Route exact path="/" render={() => <Carrossel />} />
-          <Route exact path="./passeios-van" render={() => <Passeios />} />
+          <Route exact path="/passeios/van" render={() => <Passeios />} />
         </Switch>
         {/* <Switch>
           <Route path="/mylist" component={MyList} />
