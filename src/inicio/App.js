@@ -9,12 +9,14 @@ import movies from "../dados";
 import Cabecalho from "../componentes/Cabecalho/Cabecalho";
 import ListaDeCartoes from "../componentes/ListaDeCartoes";
 import MyList from "../componentes/MyList";
+import Carrossel from "../componentes/Carrossel/Carrossel";
 
 class App extends Component {
   render() {
     return (
       <div >
         <Cabecalho />
+        <Carrossel />
 
         {/* <Switch>
           <Route path="/mylist" component={MyList} />

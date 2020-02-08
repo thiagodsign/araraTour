@@ -76,6 +76,7 @@
 .dropdown {
   position: relative;
   height: 100%;
+  z-index: 1;
   &:hover,
   &:focus {
     .dropdown__container {
