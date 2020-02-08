@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import FeatherIcon from 'feather-icons-react';
 import { Link } from "react-router-dom";
 import logo from "../../imagens/logo-arara.png";
 import './Cabecalho.scss';
@@ -8,8 +9,8 @@ class Cabecalho extends Component {
     return (
       <div className="cabecalho">
         <nav className="cabecalho__conteudo">
-          <a href="#">
-            <img src={logo} className="cabecalho__logo" />
+          <a href="#" className="cabecalho__logo">
+            <img src={logo} />
           </a>
 
           <ul className="abas">
@@ -47,6 +48,9 @@ class Cabecalho extends Component {
             </li>
           </ul>
         </nav>
+        <a href="#" className="cabecalho__carrinho-de-compras">
+          <FeatherIcon icon="shopping-cart" size="32px" />
+        </a>
       </div >
     );
   }
