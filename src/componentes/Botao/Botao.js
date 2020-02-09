@@ -1,10 +1,10 @@
 import React from 'react';
 import './Botao.scss'
 
-const Botao = ({ children }) => {
+const Botao = (props) => {
   return (
-    <button className="botao botao_cor-primaria">
-      {children}
+    <button onClick={props.metodo} className="botao botao_cor-primaria">
+      {props.children}
     </button>
   );
 }

@@ -1,0 +1,174 @@
+.dialogo {
+  display: none;
+  opacity: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  padding: 24px;
+  background: var(--cor-preta-50);
+}
+
+.dialogo_ativo {
+  display: flex;
+  opacity: 1;
+  z-index: 10;
+}
+
+.dialogo__container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin: auto;
+  width: 100%;
+  max-height: calc(100vh - 48px);
+  overflow: hidden;
+  transform: scale(0.9);
+  background: var(--cor-branca);
+  box-shadow: 4px 4px 32px var(--cor-preta-30);
+  transition: ease-in-out all 0.2s;
+  outline: 0;
+  animation-name: animacaoDeEntrada;
+  animation-duration: 0.2s;
+}
+
+@keyframes animacaoDeEntrada {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.dialogo__titulo {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--cor-cinza-70);
+}
+
+.dialogo_sem-scroll-no-conteudo {
+  overflow-y: auto;
+
+  .dialogo__container {
+    max-height: initial;
+    overflow: initial;
+  }
+
+  .dialogo__corpo {
+    overflow: initial;
+  }
+}
+
+.dialogo__subtitulo {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  color: var(--cor-cinza-70);
+}
+
+.dialogo_altura-pequena {
+  .dialogo__corpo {
+    min-height: 320px;
+  }
+}
+
+.dialogo_altura-media {
+  .dialogo__corpo {
+    min-height: 480px;
+  }
+}
+
+.dialogo_altura-grande {
+  .dialogo__corpo {
+    min-height: 640px;
+  }
+}
+
+.dialogo_gigante {
+  .dialogo__container {
+    max-width: 1366px;
+  }
+}
+
+.dialogo_grande {
+  .dialogo__container {
+    max-width: 1024px;
+  }
+}
+
+.dialogo_medio {
+  .dialogo__container {
+    max-width: 720px;
+  }
+}
+
+.dialogo_pequeno {
+  .dialogo__container {
+    max-width: 560px;
+  }
+}
+
+.dialogo_mini {
+  .dialogo__container {
+    max-width: 400px;
+  }
+}
+
+.dialogo_ativo .dialogo__container {
+  transform: scale(1);
+}
+
+.dialogo__cabecalho {
+  padding: 16px;
+  border-bottom: 2px solid var(--cor-preta-50);
+  outline: 0;
+}
+
+.dialogo__corpo {
+  flex-grow: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.dialogo__rodape {
+  border-top: 2px solid var(--cor-preta-50);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  & > *:not(:last-child) {
+    margin-bottom: 8px;
+  }
+  // @include quebra-maior-que-telefone {
+  //   flex-direction: row-reverse;
+  //   & > *:not(:last-child) {
+  //     margin-left: 8px;
+  //     margin-bottom: 0;
+  //   }
+  // }
+}
+.dialogo__botao-fechar {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  color: var(--cor-preta-60);
+  outline: 0;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover,
+  &:focus {
+    color: var(--cor-preta-70);
+    background-color: var(--cor-preta-30);
+  }
+}
