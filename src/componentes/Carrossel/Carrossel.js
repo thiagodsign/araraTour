@@ -23,10 +23,12 @@ class Carrossel extends Component {
 
     function next() {
       slideTo(currentIndex + 1);
+      limparRepeticao();
     }
 
     function prev() {
       slideTo(currentIndex - 1);
+      limparRepeticao();
     }
 
     function slideTo(index) {
@@ -45,19 +47,24 @@ class Carrossel extends Component {
       var index = bullets.indexOf(e.target);
       if (index !== -1 && index !== currentIndex) {
         slideTo(index);
+        limparRepeticao();
       }
     }, false);
 
     container.style.width = (itens.length * 100) + '%';
 
-    setInterval(() => {
-      next()
-    }, 6000);
+    let repeticaoBanner = setInterval(() => slideTo(currentIndex + 1), 6000);
+
+    function limparRepeticao() {
+      clearInterval(repeticaoBanner)
+      repeticaoBanner = setInterval(() => slideTo(currentIndex + 1), 6000);
+    }
   };
 
 
   render() {
     let banners = [Img1, Img2, Img3, Img4, Img5, Img6];
+
     return (
       <div className="carrossel__container">
         <div className="carrossel">
