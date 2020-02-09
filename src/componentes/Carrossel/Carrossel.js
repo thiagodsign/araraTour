@@ -1,5 +1,12 @@
 import React, { Component } from "react";
 import "./Carrossel.scss";
+import FeatherIcon from "feather-icons-react"
+import Img1 from "../../imagens/banners/img1.jpg"
+import Img2 from "../../imagens/banners/img2.jpg"
+import Img3 from "../../imagens/banners/img3.jpg"
+import Img4 from "../../imagens/banners/img4.jpg"
+import Img5 from "../../imagens/banners/img5.jpg"
+import Img6 from "../../imagens/banners/img6.jpg"
 
 class Carrossel extends Component {
   componentDidMount() {
@@ -48,36 +55,33 @@ class Carrossel extends Component {
     }, 6000);
   };
 
+
   render() {
+    let banners = [Img1, Img2, Img3, Img4, Img5, Img6];
     return (
       <div className="carrossel__container">
         <div className="carrossel">
-          <div className="carrossel-prev"></div>
-          <div className="carrossel-next"></div>
+          <div className="carrossel-prev">
+            <FeatherIcon icon="chevron-left" />
+          </div>
+          <div className="carrossel-next">
+            <FeatherIcon icon="chevron-right" />
+
+          </div>
           <ul className="carrossel-pagination">
-            <li className="carrossel-bullet"></li>
-            <li className="carrossel-bullet"></li>
-            <li className="carrossel-bullet"></li>
+            {banners.map((img) => {
+              return (<li id={toString(img)} className="carrossel-bullet"></li>)
+            })}
           </ul>
 
           <ul className="carrossel-container">
-            <li className="carrossel-item">
-              <div className="item">
-                <img className="banner" />
-              </div>
-            </li>
-
-            <li className="carrossel-item">
-              <div className="item">
-                <img className="banner" />
-              </div>
-            </li>
-
-            <li className="carrossel-item">
-              <div className="item">
-                <img className="banner" />
-              </div>
-            </li>
+            {banners.map((img) => {
+              return (<li className="carrossel-item">
+                <div className="item">
+                  <img className="banner" src={img} />
+                </div>
+              </li>)
+            })}
           </ul>
         </div>
       </div>

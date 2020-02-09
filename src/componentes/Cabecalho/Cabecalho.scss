@@ -1,12 +1,15 @@
 .cabecalho {
+  width: 100%;
   height: 56px;
-  background-color: var(--cor-primaria);
-  padding: 0 16px;
-  background-color: var(--cor-branca);
+  background-color: var(--cor-branca-90);
+  position: fixed;
+  top: 0;
+  z-index: 10;
 }
 
 .cabecalho__conteudo {
-  max-width: 944px;
+  max-width: 968px;
+  padding: 0 16px;
   height: 100%;
   width: 100%;
   display: flex;
@@ -31,96 +34,5 @@
   .feather {
     height: 24px;
     width: 24px;
-  }
-}
-
-@mixin reset-lista {
-  display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.abas {
-  @include reset-lista;
-  height: 100%;
-}
-
-.abas__link {
-  padding: 0 16px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 0.5px;
-  color: var(--cor-primaria);
-  &:hover,
-  &:focus {
-    background-color: var(--cor-primaria-20);
-  }
-}
-
-.abas__link_ativo {
-  background-color: var(--cor-primaria);
-  color: var(--cor-branca);
-  &:hover,
-  &:focus {
-    background-color: var(--cor-primaria);
-    color: var(--cor-branca-70);
-  }
-}
-
-.dropdown {
-  position: relative;
-  height: 100%;
-  z-index: 1;
-  &:hover,
-  &:focus,
-  &:focus-within {
-    .dropdown__container {
-      display: flex;
-    }
-  }
-}
-
-.dropdown__container {
-  position: absolute;
-  top: calc(100% - 8px);
-  right: 0px;
-  left: auto;
-  padding-top: 8px;
-  width: 100%;
-  display: none;
-}
-
-.dropdown__itens {
-  @include reset-lista;
-  display: flex;
-  flex-direction: column;
-  border-top: 2px solid var(--cor-secundaria);
-  @media screen and (max-width: 1200px) {
-    position: absolute;
-    right: 0px;
-  }
-}
-
-.dropdown__item {
-  background-color: var(--cor-primaria);
-  display: flex;
-  height: 40px;
-  padding: 0 16px;
-  align-items: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: var(--cor-branca);
-  letter-spacing: 0.5px;
-  font-size: 14px;
-  white-space: nowrap;
-  &:hover,
-  &:focus {
-    background-color: var(--cor-primaria-escura);
   }
 }

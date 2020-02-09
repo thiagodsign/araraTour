@@ -20,6 +20,7 @@
   position: relative;
   overflow: hidden;
   width: 100%;
+  z-index: 0;
 }
 
 .carrossel-container {
@@ -36,7 +37,10 @@
   position: relative;
   width: 100vw;
   overflow: hidden;
-  background-color: red;
+}
+
+.banner {
+  width: 100%;
 }
 
 /* Next / Prev Buttons */
@@ -45,15 +49,16 @@
 .carrossel-next {
   position: absolute;
   top: 50%;
-  background-color: rgb(95, 95, 95);
-  opacity: 0.7;
+  background-color: var(--cor-secundaria-40);
   border-radius: 50%;
-  color: #fff;
+  opacity: 0.8;
+  color: var(--cor-branca);
+  border: 2px solid var(--cor-secundaria-70);
   font-size: 1em;
   cursor: pointer;
-  min-width: 40px;
-  min-height: 40px;
-  line-height: 40px;
+  min-width: 56px;
+  min-height: 56px;
+  line-height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,24 +67,18 @@
   text-align: center;
   z-index: 10;
   transition: opacity 0.3s ease;
+  .feather {
+    height: 32px;
+    width: 32px;
+  }
 }
 
 .carrossel-prev {
   left: 2%;
 }
 
-.carrossel-prev::before {
-  content: "🡨";
-  font-family: "FontAwesome";
-}
-
 .carrossel-next {
   right: 2%;
-}
-
-.carrossel-next::before {
-  content: "🡪";
-  font-family: "FontAwesome";
 }
 
 .carrossel-prev:hover,
@@ -106,7 +105,7 @@
   display: inline-block;
   width: 12px;
   height: 12px;
-  background-color: #000;
+  background-color: var(--cor-primaria);
   cursor: pointer;
   margin: 0 7px;
   border-radius: 50%;
@@ -125,6 +124,6 @@
   opacity: 1;
   -webkit-transform: scale(1.3);
   transform: scale(1.3);
-  background-color: #fff;
+  background-color: var(--cor-secundaria);
   cursor: default;
 }
