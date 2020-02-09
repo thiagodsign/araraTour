@@ -7,7 +7,6 @@
   top: 0;
   left: 0;
   z-index: -1;
-  padding: 24px;
   background: var(--cor-preta-50);
 }
 
@@ -124,7 +123,7 @@
 
 .dialogo__cabecalho {
   padding: 16px;
-  border-bottom: 2px solid var(--cor-preta-50);
+  border-bottom: 2px solid var(--cor-preta-10);
   outline: 0;
 }
 
@@ -135,7 +134,7 @@
 }
 
 .dialogo__rodape {
-  border-top: 2px solid var(--cor-preta-50);
+  border-top: 2px solid var(--cor-preta-10);
   padding: 16px;
   display: flex;
   flex-direction: column;

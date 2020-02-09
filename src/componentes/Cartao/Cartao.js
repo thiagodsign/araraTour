@@ -29,7 +29,7 @@ export default class Cartao extends Component {
             </li>
           </ul>
           <footer className="cartao__rodape">
-            <Botao metodo={() => mostrarDialogo('teste')}>
+            <Botao metodo={() => mostrarDialogo('dialogo1')} >
               <FeatherIcons icon="map" />
               Reservar agora
             </Botao>

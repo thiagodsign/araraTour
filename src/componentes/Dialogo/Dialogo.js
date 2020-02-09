@@ -6,7 +6,7 @@ import FeatherIcon from "feather-icons-react"
 export default class Dialogo extends Component {
   render() {
     return (
-      <div className={`dialogo dialogo_${this.props.tamanho}`} id="teste">
+      <div className={`dialogo dialogo_${this.props.tamanho}`} id={this.props.id}>
         <div className="dialogo__container">
           <div className="dialogo__cabecalho">
             <h2 className="dialogo__titulo">{this.props.titulo}</h2>
