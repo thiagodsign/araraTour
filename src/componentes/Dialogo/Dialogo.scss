@@ -137,12 +137,11 @@
   border-top: 2px solid var(--cor-preta-10);
   padding: 16px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
   & > *:not(:last-child) {
-    margin-bottom: 8px;
+    margin-left: 8px;
   }
   // @include quebra-maior-que-telefone {
-  //   flex-direction: row-reverse;
   //   & > *:not(:last-child) {
   //     margin-left: 8px;
   //     margin-bottom: 0;

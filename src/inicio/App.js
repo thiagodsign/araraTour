@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.scss";
 import { Route, Switch, Redirect } from "react-router-dom";
+import logoIcone from "../imagens/logo_icone.png"
 
 // Data
 import movies from "../dados";
@@ -19,7 +20,14 @@ class App extends Component {
         <Cabecalho />
 
         <Switch>
-          <Route exact path="/" render={() => <Carrossel />} />
+          <Route exact path="/" render={() => {
+            return (
+              <>
+                <Carrossel></Carrossel>
+                <img src={logoIcone} className="icone-flutuante" />
+              </>
+            );
+          }} />
           <Route exact path="/passeios/van" render={() => <Passeios />} />
         </Switch>
         {/* <Switch>

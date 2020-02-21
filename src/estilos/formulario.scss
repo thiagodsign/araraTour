@@ -1,0 +1,33 @@
+.formulario {
+  display: flex;
+  input {
+    padding: 0 8px;
+    height: 40px;
+    font-size: 14px;
+    margin: 0;
+    display: inline-flex;
+    border-radius: 4px;
+    border: 2px solid var(--cor-preta-20);
+    outline: 0;
+    &:focus,
+    &:hover {
+      border-color: var(--cor-primaria);
+    }
+  }
+}
+
+.formulario__label {
+  margin-bottom: 4px;
+}
+
+.grade {
+  display: flex;
+  width: calc(100% + 16px);
+}
+
+.grade__item {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin: 0 8px;
+}
