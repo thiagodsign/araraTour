@@ -5,6 +5,7 @@ import "./Passeios.scss";
 import Dialogo from "../Dialogo/Dialogo";
 import Botao from "../Botao/Botao";
 import { fecharDialogo } from "../Dialogo/DialogoConfiguracao";
+import pacotes from '../../dados'
 
 export default class Passeios extends Component {
   componentDidMount() {
@@ -41,17 +42,15 @@ export default class Passeios extends Component {
           <img src={ImagemBanner} alt="" />
         </div>
         <div className="passeios__conteudo">
-          <Cartao titulo="Passeio completo" descricao="Passeio insano" item="descricao" />
-          <Cartao titulo="Passeio completo" descricao="Passeio insano" item="descricao" />
-          <Cartao titulo="Passeio completo" descricao="Passeio insano" item="descricao" />
-          <Cartao titulo="Passeio completo" descricao="Passeio insano" item="descricao" />
-          <Cartao titulo="Passeio completo" descricao="Passeio insano" item="descricao" />
-          <Cartao titulo="Passeio completo" descricao="Passeio insano" item="descricao" />
-          <Cartao titulo="Passeio completo" descricao="Passeio insano" item="descricao" />
-          <Cartao titulo="Passeio completo" descricao="Passeio insano" item="descricao" />
-          <Cartao titulo="Passeio completo" descricao="Passeio insano" item="descricao" />
-          <Cartao titulo="Passeio completo" descricao="Passeio insano" item="descricao" />
-          <Cartao titulo="Passeio completo" descricao="Passeio insano" item="descricao" />
+          {pacotes.map(pacote =>
+            <Cartao key={pacote.id}
+              duracao={pacote.duracao}
+              valores={pacote.valores}
+              info={pacote.info}
+              titulo={pacote.nome}
+              imagem={pacote.imagem}
+              descricao={pacote.descricao} />
+          )}
           <Dialogo id="dialogo1" tamanho="medio" titulo="Passarinho que dorme dorme" descricao="Passeio incrível"
             conteudo={conteudoDoDialogo()}
             rodape={rodapeDoDialogo()} />

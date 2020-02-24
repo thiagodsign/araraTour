@@ -40,3 +40,40 @@ nav.Cabecalho.Cabecalho-dark {
   opacity: 0.8;
   filter: blur(4px);
 }
+
+.dica {
+  position: relative;
+  height: 100%;
+  z-index: 1;
+  &:hover,
+  &:focus,
+  &:focus-within {
+    .dica__conteudo {
+      display: flex;
+    }
+  }
+}
+
+.dica__conteudo {
+  position: absolute;
+  background-color: var(--cor-branca);
+  padding: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  top: 100%;
+  left: auto;
+  padding-top: 8px;
+  display: none;
+  margin: 0;
+  width: 400px;
+}
+
+.select {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branca);
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 0;
+  margin: 8px 0;
+}
