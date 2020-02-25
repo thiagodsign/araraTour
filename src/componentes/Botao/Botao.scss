@@ -25,3 +25,18 @@
     transform: translate(0, -1px);
   }
 }
+
+.botao_detalhes {
+  padding: 4px;
+  background: none;
+  box-shadow: none;
+  color: var(--cor-primaria);
+  &:focus,
+  &:hover {
+    background: none;
+  }
+  .feather {
+    width: 18px;
+    height: 18px;
+  }
+}

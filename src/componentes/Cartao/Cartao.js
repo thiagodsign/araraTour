@@ -5,8 +5,20 @@ import './Cartao.scss'
 import { mostrarDialogo } from '../Dialogo/DialogoConfiguracao'
 
 export default class Cartao extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: this.props.valores[0].id,
+      preco: this.props.valores[0].preco
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({ value: event.target.value, preco: event.target.preco });
+  }
+
   render() {
-    let pacoteSelecionado = '';
     return (
       <div className="cartao">
         <div className="cartao__container-imagem">
@@ -16,9 +28,9 @@ export default class Cartao extends Component {
         <div className="cartao__cabecalho">
           <h2 className="cartao__titulo">{this.props.titulo}</h2>
           <div className="dica">
-            <Botao>
+            <button className="botao botao_detalhes">
               <FeatherIcons icon="info" /> Info
-            </Botao>
+            </button>
             <p className="dica__conteudo">
               {this.props.info}
             </p>
@@ -33,18 +45,20 @@ export default class Cartao extends Component {
           {this.props.duracao}
         </p>
 
-        <select className="select">
+        <label>
+          Escolha a quantidade de pessoas:
+        </label>
+        <select className="select" value={this.state.value} onChange={this.handleChange}>
           {this.props.valores.map(valor => {
             return (
-              <>
-                <option value={valor.id} key={valor.id}>{valor.id} {valor.id > 1 ? 'Pessoas' : 'Pessoa'}</option>
-              </>
+              <option value={valor.id}>
+                {valor.id} {valor.id != 1 ? 'Pessoas' : 'Pessoa'}
+              </option>
             )
-          })}
+          })};
         </select>
 
-        <p>R$ ,00/pessoa </p>
-
+        <p className="texto texto_destaque">R$ {this.props.valores[this.state.value - 1].preco},00 /pessoa</p>
 
         <footer className="cartao__rodape">
           <Botao metodo={() => mostrarDialogo('dialogo1')} >
@@ -52,7 +66,7 @@ export default class Cartao extends Component {
             Estou interessado
             </Botao>
         </footer>
-      </div>
+      </div >
     )
   }
 }

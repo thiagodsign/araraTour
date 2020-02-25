@@ -11,6 +11,7 @@ import Cabecalho from "../componentes/Cabecalho/Cabecalho";
 import ListaDeCartoes from "../componentes/ListaDeCartoes";
 import MyList from "../componentes/MyList";
 import Carrossel from "../componentes/Carrossel/Carrossel";
+import PasseiosVan from "../componentes/Passeios/PasseiosVan";
 import Passeios from "../componentes/Passeios/Passeios";
 
 class App extends Component {
@@ -28,7 +29,8 @@ class App extends Component {
               </>
             );
           }} />
-          <Route exact path="/passeios/van" render={() => <Passeios />} />
+          <Route exact path="/passeios/van" render={() => <PasseiosVan />} />
+          <Route exact path="/passeios" render={() => <Passeios />} />
         </Switch>
         {/* <Switch>
           <Route path="/mylist" component={MyList} />
