@@ -1,10 +1,9 @@
+import caminito from "../../imagens/caminito.jpg";
+import florMetalica from "../../imagens/flor-metalica.jpg";
+import zoo from "../../imagens/zoo.jpg";
+import museo from "../../imagens/museo.jpg";
 
-import caminito from "./imagens/caminito.jpg";
-import florMetalica from "./imagens/flor-metalica.jpg";
-import zoo from "./imagens/zoo.jpg";
-import museo from "./imagens/museo.jpg";
-
-let pacotesVan = [
+let pacotesCarro = [
   {
     id: 1,
     nome: "Caminito ",
@@ -12,19 +11,26 @@ let pacotesVan = [
     descricao: 'City tour basico',
     duracao: '3h de duração',
     info:
-      `Nesta categoria realizamos todos os mesmos trajetos realizados pelas empresas de turismo da cidade feitos em van/ônibus, e com a duração de 3h00 passando por 10 pontos turísticos e apenas 3 paradas (boca, caminito e casa rosada). Voucher eletrónico após confirmação de pagamento.`,
+      `Nesta categoria nos realizamos todos os mesmos
+      trajetos realizados pelas empresas de turismo da
+      cidade feitos em van/ônibus, com a vantagem de
+      deixar de volta no hotel, CARRO PARTICULAR e
+      com a duração de 3h00 passando por 10 pontos
+      turísticos e apenas 3 paradas (boca, caminito e
+      casa rosada).
+      Pagamento após termino do passeio.`,
     valores: [
       {
-        id: 1,
-        preco: 80,
-      },
-      {
         id: 2,
-        preco: 75,
+        preco: 120,
       },
       {
         id: 3,
-        preco: 75,
+        preco: 100,
+      },
+      {
+        id: 4,
+        preco: 90,
       }
     ]
   },
@@ -35,30 +41,43 @@ let pacotesVan = [
     descricao: 'City tour Premium (SELFIE TOUR)',
     duracao: '5h de duração',
     info:
-      `Nesta categoria o cliente dispõe de 5 hrs de passeio, Possui 12 pontos turísticos com aproximadamente 10 paradas (boca, caminito, casa rosada, porto  madero,, cemitério de recoleta, flor metálica, rosedal, Mafalda e planetário, faculdade de direito). Buscando no seu Hotel entre 10h e 11h com finalização as 15h ou 15h30.Feito todos dias da semana. Passeio não cancelado em dias de chuva. **GUIAS FALAM PORTUGUES**. Voucher eletrónico após confirmação de pagamento.`,
+      `Nesta categoria o cliente dispõe de 5 hrs de
+      passeio, CARRO PARTICULAR e se desejar ganha
+      de cortesia meia hora para passagem em fabrica
+      de couro argentina.
+      Possui 18 pontos turísticos com aproximadamente
+      11 paradas (boca, caminito, casa rosada, porto
+      madero, café tortoni, cemitério de recoleta, flor
+      metálica, rosedal, Mafalda e jardim japonês).
+      Podendo ser alterado colocando roteiros
+      adicionais e retirando outros totalmente ao gosto
+      do cliente. (entrada jardim japonês não incluída,
+      busca e deixa de volta hotel).
+      Pagamento após termino do passeio.
+      (Roteiro pode ser personalizável pelo cliente)`,
     valores: [
       {
-        id: 1,
-        preco: 90,
-      },
-      {
         id: 2,
-        preco: 80,
+        preco: 150,
       },
       {
         id: 3,
-        preco: 80,
+        preco: 115,
       },
       {
         id: 4,
-        preco: 80,
+        preco: 115,
       },
       {
         id: 5,
-        preco: 80,
+        preco: 115,
       },
       {
         id: 6,
+        preco: 115,
+      },
+      {
+        id: 7,
         preco: 'Entrar em contato',
       }
     ]
@@ -149,4 +168,4 @@ let pacotesVan = [
   },
 ];
 
-export default pacotesVan;
+export default pacotesCarro;

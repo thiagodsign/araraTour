@@ -5,7 +5,7 @@ import "./Passeios.scss";
 import Dialogo from "../Dialogo/Dialogo";
 import Botao from "../Botao/Botao";
 import { fecharDialogo } from "../Dialogo/DialogoConfiguracao";
-import pacotesVan from './dadosVan'
+import pacotesCarro from './dadosCarros'
 
 export default class PasseiosVan extends Component {
   componentDidMount() {
@@ -42,7 +42,7 @@ export default class PasseiosVan extends Component {
           <img src={ImagemBanner} alt="" />
         </div>
         <div className="passeios__conteudo">
-          {pacotesVan.map(pacote =>
+          {pacotesCarro.map(pacote =>
             <Cartao key={pacote.id}
               duracao={pacote.duracao}
               valores={pacote.valores}

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import movies from "../dados";
+import movies from "./Passeios/dadosVan";
 
 class MyList extends Component {
   render() {

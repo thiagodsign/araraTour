@@ -3,15 +3,10 @@ import "./App.scss";
 import { Route, Switch, Redirect } from "react-router-dom";
 import logoIcone from "../imagens/logo_icone.png"
 
-// Data
-import movies from "../dados";
-
-// Components
 import Cabecalho from "../componentes/Cabecalho/Cabecalho";
-import ListaDeCartoes from "../componentes/ListaDeCartoes";
-import MyList from "../componentes/MyList";
 import Carrossel from "../componentes/Carrossel/Carrossel";
 import PasseiosVan from "../componentes/Passeios/PasseiosVan";
+import PasseiosCarro from "../componentes/Passeios/PasseiosCarro";
 import Passeios from "../componentes/Passeios/Passeios";
 
 class App extends Component {
@@ -30,6 +25,7 @@ class App extends Component {
             );
           }} />
           <Route exact path="/passeios/van" render={() => <PasseiosVan />} />
+          <Route exact path="/passeios/carro" render={() => <PasseiosCarro />} />
           <Route exact path="/passeios" render={() => <Passeios />} />
         </Switch>
         {/* <Switch>
