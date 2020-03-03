@@ -11,14 +11,7 @@ let pacotesCarro = [
     descricao: 'City tour basico',
     duracao: '3h de duração',
     info:
-      `Nesta categoria nos realizamos todos os mesmos
-      trajetos realizados pelas empresas de turismo da
-      cidade feitos em van/ônibus, com a vantagem de
-      deixar de volta no hotel, CARRO PARTICULAR e
-      com a duração de 3h00 passando por 10 pontos
-      turísticos e apenas 3 paradas (boca, caminito e
-      casa rosada).
-      Pagamento após termino do passeio.`,
+      `Nesta categoria nos realizamos todos os mesmos trajetos realizados pelas empresas de turismo da cidade feitos em van/ônibus, com a vantagem de deixar de volta no hotel, CARRO PARTICULAR e com a duração de 3h00 passando por 10 pontos turísticos e apenas 3 paradas (boca, caminito e casa rosada). Pagamento após termino do passeio.`,
     valores: [
       {
         id: 2,
