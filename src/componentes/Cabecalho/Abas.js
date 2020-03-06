@@ -22,22 +22,17 @@ class Abas extends Component {
               <ul className="dropdown__itens">
                 <li>
                   <NavLink to='/passeios/van' className="dropdown__item" activeClassName="dropdown__item_ativo">
-                    <img /> Passeios de Van
+                    Passeios de Van
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to='/passeios/carro' className="dropdown__item" activeClassName="dropdown__item_ativo">
-                    <img /> Passeios de carro
+                    Passeios de carro
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to='/passeios/aviao' className="dropdown__item" activeClassName="dropdown__item_ativo">
-                    <img /> Passeios de avião
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to='/passeios/tango' className="dropdown__item" activeClassName="dropdown__item_ativo">
-                    <img /> Tango
+                  <NavLink to='/passeios/transfer' className="dropdown__item" activeClassName="dropdown__item_ativo">
+                    Transfer
                   </NavLink>
                 </li>
               </ul>

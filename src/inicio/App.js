@@ -8,6 +8,7 @@ import Carrossel from "../componentes/Carrossel/Carrossel";
 import PasseiosVan from "../componentes/Passeios/PasseiosVan";
 import PasseiosCarro from "../componentes/Passeios/PasseiosCarro";
 import Passeios from "../componentes/Passeios/Passeios";
+import Transfer from "../componentes/Passeios/Transfer";
 
 class App extends Component {
   render() {
@@ -27,6 +28,7 @@ class App extends Component {
           <Route exact path="/passeios/van" render={() => <PasseiosVan />} />
           <Route exact path="/passeios/carro" render={() => <PasseiosCarro />} />
           <Route exact path="/passeios" render={() => <Passeios />} />
+          <Route exact path="/passeios/transfer" render={() => <Transfer />} />
         </Switch>
         {/* <Switch>
           <Route path="/mylist" component={MyList} />
