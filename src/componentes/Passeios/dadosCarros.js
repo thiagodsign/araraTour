@@ -15,15 +15,15 @@ let pacotesCarro = [
     valores: [
       {
         id: 2,
-        preco: 120,
+        preco: 'R$ 120 /pessoa',
       },
       {
         id: 3,
-        preco: 100,
+        preco: 'R$ 100 /pessoa',
       },
       {
         id: 4,
-        preco: 90,
+        preco: 'R$ 90 /pessoa',
       }
     ]
   },
@@ -31,43 +31,30 @@ let pacotesCarro = [
     id: 2,
     nome: "Flor metalica ",
     imagem: florMetalica,
-    descricao: 'City tour Premium (SELFIE TOUR)',
-    duracao: '5h de duração',
+    descricao: 'Clientes Arara Turismo',
+    duracao: '24h',
     info:
-      `Nesta categoria o cliente dispõe de 5 hrs de
-      passeio, CARRO PARTICULAR e se desejar ganha
-      de cortesia meia hora para passagem em fabrica
-      de couro argentina.
-      Possui 18 pontos turísticos com aproximadamente
-      11 paradas (boca, caminito, casa rosada, porto
-      madero, café tortoni, cemitério de recoleta, flor
-      metálica, rosedal, Mafalda e jardim japonês).
-      Podendo ser alterado colocando roteiros
-      adicionais e retirando outros totalmente ao gosto
-      do cliente. (entrada jardim japonês não incluída,
-      busca e deixa de volta hotel).
-      Pagamento após termino do passeio.
-      (Roteiro pode ser personalizável pelo cliente)`,
+      ``,
     valores: [
       {
         id: 2,
-        preco: 150,
+        preco: 'R$ 150 /pessoa',
       },
       {
         id: 3,
-        preco: 115,
+        preco: 'R$ 115 /pessoa',
       },
       {
         id: 4,
-        preco: 115,
+        preco: 'R$ 115 /pessoa',
       },
       {
         id: 5,
-        preco: 115,
+        preco: 'R$ 115 /pessoa',
       },
       {
         id: 6,
-        preco: 115,
+        preco: 'R$ 115 /pessoa',
       },
       {
         id: 7,
@@ -86,23 +73,23 @@ let pacotesCarro = [
     valores: [
       {
         id: 1,
-        preco: 195,
+        preco: 'R$ 195 /pessoa',
       },
       {
         id: 2,
-        preco: 190,
+        preco: 'R$ 190 /pessoa',
       },
       {
         id: 3,
-        preco: 190,
+        preco: 'R$ 190 /pessoa',
       },
       {
         id: 4,
-        preco: 190,
+        preco: 'R$ 190 /pessoa',
       },
       {
         id: 5,
-        preco: 190,
+        preco: 'R$ 190 /pessoa',
       },
       {
         id: 6,
@@ -135,23 +122,23 @@ let pacotesCarro = [
     valores: [
       {
         id: 1,
-        preco: 120,
+        preco: 'R$ 120 /pessoa',
       },
       {
         id: 2,
-        preco: 115,
+        preco: 'R$ 115 /pessoa',
       },
       {
         id: 3,
-        preco: 115,
+        preco: 'R$ 115 /pessoa',
       },
       {
         id: 4,
-        preco: 115,
+        preco: 'R$ 115 /pessoa',
       },
       {
         id: 5,
-        preco: 115,
+        preco: 'R$ 115 /pessoa',
       },
       {
         id: 6,

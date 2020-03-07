@@ -58,7 +58,7 @@ export default class Cartao extends Component {
           })};
         </select>
 
-        <p className="texto texto_destaque">R$ {this.props.valores[this.state.value - 1].preco},00 /pessoa</p>
+        <p className="texto texto_destaque">{this.props.valores[this.state.value - 1].preco}</p>
 
         <footer className="cartao__rodape">
           <Botao metodo={() => mostrarDialogo('dialogo1')} >

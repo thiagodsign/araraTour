@@ -3,7 +3,7 @@ import florMetalica from "../../imagens/flor-metalica.jpg";
 import zoo from "../../imagens/zoo.jpg";
 import museo from "../../imagens/museo.jpg";
 
-let pacotesCarro = [
+let pacotesTransfer = [
   {
     id: 1,
     nome: "Caminito ",
@@ -161,4 +161,4 @@ let pacotesCarro = [
   },
 ];
 
-export default pacotesCarro;
+export default pacotesTransfer;
