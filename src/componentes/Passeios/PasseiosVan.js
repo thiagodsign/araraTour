@@ -16,7 +16,7 @@ export default class PasseiosVan extends Component {
   render() {
     let conteudoDoDialogo = () => (
       <form className="formulario">
-        <div class="grade">
+        <div className="grade">
           <div className="grade__item">
             <label className="formulario__label">Insira o horário desejado</label>
             <input placeholder="Insira o nome do Passeio" type="text" />
