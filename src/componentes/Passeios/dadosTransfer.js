@@ -1,6 +1,7 @@
-import passaporte from "../../imagens/transfer-passaport.jpg";
+import passaporte from "../../imagens/transfer-passaport.png";
+import aviao from "../../imagens/transfer-aviao.png";
 
-let pacotesCarro = [
+export let pacotesTransfer = [
   {
     id: 1,
     nome: "Clientes Arara Turismo",
@@ -10,42 +11,57 @@ let pacotesCarro = [
       ``,
     valores: [
       {
-        id: 2,
-        preco: 'R$ 120 /pessoa',
-      },
-      {
-        id: 3,
-        preco: 'R$ 100 /pessoa',
-      },
-      {
-        id: 4,
-        preco: 'R$ 90 /pessoa',
+        id: 1,
+        preco: 'A partir de R$80',
       }
     ]
   },
+
   {
     id: 2,
-    nome: "Caminito ",
-    imagem: passaporte,
+    nome: "Apenas Transfer ",
+    imagem: aviao,
     descricao: 'City tour basico',
-    duracao: '3h de duração',
     info:
       ``,
     valores: [
       {
-        id: 2,
-        preco: 'R$ 120 /pessoa',
-      },
-      {
-        id: 3,
-        preco: 'R$ 100 /pessoa',
-      },
-      {
-        id: 4,
-        preco: 'R$ 90 /pessoa',
+        id: 1,
+        preco: 'A partir de R$100',
       }
     ]
   },
 ];
 
-export default pacotesCarro;
+export let pessoas = [
+  {
+    id: 1,
+    quantidade: "1 pessoa",
+    valor: "R$80/Pessoas",
+  },
+  {
+    id: 2,
+    quantidade: "2 pessoas",
+    valor: "R$80/Pessoas",
+  },
+  {
+    id: 3,
+    quantidade: "3 pessoas",
+    valor: "R$80/Pessoas",
+  },
+  {
+    id: 4,
+    quantidade: "4 pessoas",
+    valor: "R$80/Pessoas",
+  },
+  {
+    id: 5,
+    quantidade: "5 pessoas",
+    valor: "R$80/Pessoas",
+  },
+  {
+    id: 6,
+    quantidade: "Acima de 7",
+    valor: "A combinar",
+  },
+]

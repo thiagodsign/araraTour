@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap");
 @import "./cores.scss";
 @import "./formulario.scss";
+@import "./grade.scss";
 
 body {
   margin: 0;
@@ -33,11 +34,10 @@ nav.Cabecalho.Cabecalho-dark {
 .icone-flutuante {
   position: fixed;
   left: -40px;
-  bottom: 56px;
-  height: 800px;
+  bottom: 80px;
+  height: 680px;
   z-index: 2;
   opacity: 0.8;
-  filter: blur(4px);
 }
 
 .dica {
@@ -84,4 +84,35 @@ nav.Cabecalho.Cabecalho-dark {
   color: var(--cor-primaria);
   font-size: 18px;
   margin: 0 0 16px 0;
+}
+
+.titulo-pagina {
+  margin: 16px auto;
+  color: var(--cor-primaria);
+  text-align: center;
+}
+
+.mensagem {
+  box-sizing: border-box;
+  padding: 16px;
+  width: 100%;
+  background-color: var(--cor-primaria-10);
+  border: 2px solid var(--cor-primaria);
+  border-radius: 8px;
+  .mensagem__titulo {
+    font-size: 16px;
+    margin: 0;
+    color: var(--cor-primaria);
+  }
+  .mensagem__texto {
+    margin: 0;
+    font-size: 16px;
+    color: rgb(43, 43, 43);
+  }
+}
+
+.rodape {
+  background-color: var(--cor-preta-90);
+  padding: 24px;
+  height: 200px;
 }

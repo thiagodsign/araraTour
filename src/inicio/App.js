@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import "./App.scss";
 import { Route, Switch, Redirect } from "react-router-dom";
-import logoIcone from "../imagens/logo_icone.png"
+import logoIcone from "../imagens/logo-icone.svg"
 
 import Cabecalho from "../componentes/Cabecalho/Cabecalho";
 import Carrossel from "../componentes/Carrossel/Carrossel";
-import PasseiosVan from "../componentes/Passeios/PasseiosVan";
 import PasseiosCarro from "../componentes/Passeios/PasseiosCarro";
 import Passeios from "../componentes/Passeios/Passeios";
 import Transfer from "../componentes/Passeios/Transfer";
@@ -25,7 +24,6 @@ class App extends Component {
               </>
             );
           }} />
-          <Route exact path="/passeios/van" render={() => <PasseiosVan />} />
           <Route exact path="/passeios/carro" render={() => <PasseiosCarro />} />
           <Route exact path="/passeios" render={() => <Passeios />} />
           <Route exact path="/passeios/transfer" render={() => <Transfer />} />
@@ -40,6 +38,8 @@ class App extends Component {
           />
           <Redirect to="/not-found" />
         </Switch> */}
+
+        <footer className="rodape"></footer>
       </>
     );
   }

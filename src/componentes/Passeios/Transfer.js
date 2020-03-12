@@ -5,9 +5,18 @@ import "./Passeios.scss";
 import Dialogo from "../Dialogo/Dialogo";
 import Botao from "../Botao/Botao";
 import { fecharDialogo } from "../Dialogo/DialogoConfiguracao";
-import pacotesVan from './dadosVan'
+import { pacotesTransfer, pessoas } from './dadosTransfer'
 
 export default class PasseiosVan extends Component {
+  constructor(props) {
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({ value: event.target.value, preco: event.target.preco });
+  }
+
   componentDidMount() {
     const containerPasseios = document.querySelector('.passeios');
     containerPasseios.focus();
@@ -16,14 +25,87 @@ export default class PasseiosVan extends Component {
   render() {
     let conteudoDoDialogo = () => (
       <form className="formulario">
-        <div clasNames="grade">
-          <div className="grade__item">
-            <label className="formulario__label">Insira o horário desejado</label>
-            <input placeholder="Insira o nome do Passeio" type="text" />
+        <div className="grade">
+          <div className="grade__linha">
+            <div className="grade__coluna">
+              <div className="mensagem">
+                <h2 className="mensagem__titulo">Cliente Arara Turismo</h2>
+                <p className="mensagem__texto">É quem está colocando em seu carrinho de compras qualquer passeio em veículo conosco. Não incluso para shows de tangos e outros tipos de passeio na cidade.</p>
+              </div>
+            </div>
           </div>
-          <div className="grade__item">
-            <label className="formulario__label">Insira o horário desejado</label>
-            <input placeholder="Insira o nome do Passeio" type="text" />
+
+          <div className="grade__linha">
+            <div className="grade__coluna">
+              <label>Nº de pessoas</label>
+              <select className="select">
+                {pessoas.map(pessoa => {
+                  return (
+                    <option value={`teste`}>
+                      {pessoa.quantidade}
+                    </option>
+                  )
+                })};
+              </select>
+            </div>
+
+            <div className="grade__coluna grade__coluna_alinhar-vertical-centro">
+              <h3>R$80/Pessoa</h3>
+            </div>
+          </div>
+
+          <div className="grade__linha">
+            <div className="grade__coluna">
+              <label>Data de</label>
+              <input type="date" />
+            </div>
+          </div>
+
+          <div className="grade__linha">
+            <div className="grade__coluna">
+              <label>Origem / Destino </label>
+              <select className="select">
+                <option>
+                  Coisa
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <div className="grade__linha">
+            <div className="grade__coluna">
+              <label>Nº do voo:</label>
+              <input type="text"></input>
+            </div>
+            <div className="grade__coluna">
+              <label>Companhia:</label>
+              <input type="text"></input>
+            </div>
+            <div className="grade__coluna">
+              <label>Horário de chegada:</label>
+              <input type="text"></input>
+            </div>
+          </div>
+
+          <div className="grade__linha">
+            <div className="grade__coluna">
+              <label>Hotel:</label>
+              <input type="text"></input>
+            </div>
+          </div>
+
+          <div className="grade__linha">
+            <div className="grade__coluna">
+              <label>Nome completo:</label>
+              <input type="text"></input>
+            </div>
+          </div>
+
+          <div className="grade__linha">
+            <div className="grade__coluna">
+              <label>Nº de WhatsApp:</label>
+              <input type="text"></input>
+            </div>
           </div>
         </div>
       </form>
@@ -41,19 +123,23 @@ export default class PasseiosVan extends Component {
         <div className="passeios__banner">
           <img src={ImagemBanner} alt="" />
         </div>
+        <h2 className="titulo-pagina">Transfer</h2>
         <div className="passeios__conteudo">
-          {pacotesVan.map(pacote =>
-            <Cartao key={pacote.id}
-              duracao={pacote.duracao}
-              valores={pacote.valores}
-              info={pacote.info}
-              titulo={pacote.nome}
-              imagem={pacote.imagem}
-              descricao={pacote.descricao} />
+          {pacotesTransfer.map(pacote =>
+            <>
+              <Cartao key={pacote.id}
+                duracao={pacote.duracao}
+                valores={pacote.valores}
+                info={pacote.info}
+                titulo={pacote.nome}
+                imagem={pacote.imagem}
+                descricao={pacote.descricao}
+                idDoDialogo={`transfer${pacote.id}`} />
+              <Dialogo id={`transfer${pacote.id}`} tamanho="medio" titulo="Transfer" descricao={pacote.nome}
+                conteudo={conteudoDoDialogo()}
+                rodape={rodapeDoDialogo()} />
+            </>
           )}
-          <Dialogo id="dialogo1" tamanho="medio" titulo="Passarinho que dorme dorme" descricao="Passeio incrível"
-            conteudo={conteudoDoDialogo()}
-            rodape={rodapeDoDialogo()} />
         </div>
       </div>
     );

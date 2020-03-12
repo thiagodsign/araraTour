@@ -18,6 +18,42 @@ export default class Cartao extends Component {
     this.setState({ value: event.target.value, preco: event.target.preco });
   }
 
+  informacoes() {
+    if (this.props.info) {
+      return (
+        <div className="dica">
+          <button className="botao botao_detalhes">
+            <FeatherIcons icon="info" /> Info
+        </button>
+          <p className="dica__conteudo">
+            {this.props.info}
+          </p>
+        </div>
+      )
+    }
+  }
+
+  pessoas() {
+    if (this.props.valores.length > 1) {
+      return (
+        <>
+          <label>
+            Escolha a quantidade de pessoas:
+          </label>
+          <select className="select" value={this.state.value} onChange={this.handleChange}>
+            {this.props.valores.map(valor => {
+              return (
+                <option value={valor.id}>
+                  {valor.id} {valor.id != 1 ? 'Pessoas' : 'Pessoa'}
+                </option>
+              )
+            })};
+           </select>
+        </>
+      )
+    }
+  }
+
   render() {
     return (
       <div className="cartao">
@@ -27,14 +63,8 @@ export default class Cartao extends Component {
 
         <div className="cartao__cabecalho">
           <h2 className="cartao__titulo">{this.props.titulo}</h2>
-          <div className="dica">
-            <button className="botao botao_detalhes">
-              <FeatherIcons icon="info" /> Info
-            </button>
-            <p className="dica__conteudo">
-              {this.props.info}
-            </p>
-          </div>
+
+          {this.informacoes()}
         </div>
 
         <p className="cartao__descricao">
@@ -45,25 +75,14 @@ export default class Cartao extends Component {
           {this.props.duracao}
         </p>
 
-        <label>
-          Escolha a quantidade de pessoas:
-        </label>
-        <select className="select" value={this.state.value} onChange={this.handleChange}>
-          {this.props.valores.map(valor => {
-            return (
-              <option value={valor.id}>
-                {valor.id} {valor.id != 1 ? 'Pessoas' : 'Pessoa'}
-              </option>
-            )
-          })};
-        </select>
+        {this.pessoas()}
 
         <p className="texto texto_destaque">{this.props.valores[this.state.value - 1].preco}</p>
 
         <footer className="cartao__rodape">
-          <Botao metodo={() => mostrarDialogo('dialogo1')} >
+          <Botao metodo={() => mostrarDialogo(this.props.idDoDialogo)} >
             <FeatherIcons icon="map" />
-            Estou interessado
+            Reservar
             </Botao>
         </footer>
       </div >

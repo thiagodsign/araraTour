@@ -41,6 +41,7 @@ export default class PasseiosVan extends Component {
         <div className="passeios__banner">
           <img src={ImagemBanner} alt="" />
         </div>
+        <h2 className="titulo-pagina">Passeios veículo particular</h2>
         <div className="passeios__conteudo">
           {pacotesCarro.map(pacote =>
             <Cartao key={pacote.id}
