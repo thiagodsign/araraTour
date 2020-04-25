@@ -29,8 +29,12 @@
 .cabecalho__carrinho-de-compras {
   position: absolute;
   right: 16px;
-  top: 16px;
+  top: 0;
   color: var(--cor-primaria);
+  background: none;
+  border: 0;
+  cursor: pointer;
+  height: 100%;
   .feather {
     height: 24px;
     width: 24px;

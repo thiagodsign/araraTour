@@ -129,3 +129,27 @@
   background-color: var(--cor-secundaria);
   cursor: default;
 }
+
+.carrossel__texto {
+  position: absolute;
+  left: 50%;
+  background-color: var(--cor-preta-40);
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start,;
+  align-items: flex-start;
+  h2 {
+    padding: 16px;
+    background-color: var(--cor-branca);
+    font-size: 20px;
+    margin: 0;
+  }
+  p {
+    color: var(--cor-branca);
+    font-size: 16px;
+    padding: 8px 16px;
+    margin: 0;
+    text-align: left;
+    max-width: 300px;
+  }
+}
