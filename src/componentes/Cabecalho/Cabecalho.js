@@ -11,14 +11,15 @@ class Cabecalho extends Component {
       <div className="cabecalho">
         <nav className="cabecalho__conteudo">
           <Link to='/' className="cabecalho__logo">
-            <img src={logo} />
+            <img src={logo} alt="Logo"/>
           </Link>
 
           <Abas />
         </nav>
-        <a href="#" className="cabecalho__carrinho-de-compras">
+
+        <button href="#" className="cabecalho__carrinho-de-compras">
           <FeatherIcon icon="shopping-cart" size="32px" />
-        </a>
+        </button>
       </div>
     );
   }

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.scss";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import logoIcone from "../imagens/logo-icone.svg"
 
 import Cabecalho from "../componentes/Cabecalho/Cabecalho";
@@ -20,7 +20,7 @@ class App extends Component {
             return (
               <>
                 <Carrossel></Carrossel>
-                <img src={logoIcone} className="icone-flutuante" />
+                <img src={logoIcone} className="icone-flutuante" alt="Ícone arara turismo" />
               </>
             );
           }} />

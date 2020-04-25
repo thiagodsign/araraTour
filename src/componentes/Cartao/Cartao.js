@@ -44,7 +44,7 @@ export default class Cartao extends Component {
             {this.props.valores.map(valor => {
               return (
                 <option value={valor.id}>
-                  {valor.id} {valor.id != 1 ? 'Pessoas' : 'Pessoa'}
+                  {valor.id} {valor.id !== 1 ? 'Pessoas' : 'Pessoa'}
                 </option>
               )
             })};
@@ -58,7 +58,7 @@ export default class Cartao extends Component {
     return (
       <div className="cartao">
         <div className="cartao__container-imagem">
-          <img className="cartao__imagem" src={this.props.imagem} />
+          <img className="cartao__imagem" src={this.props.imagem} alt="Imagem do cartão" />
         </div>
 
         <div className="cartao__cabecalho">

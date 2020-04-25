@@ -32,12 +32,13 @@ nav.Cabecalho.Cabecalho-dark {
 }
 
 .icone-flutuante {
-  position: fixed;
-  left: -40px;
-  bottom: 80px;
-  height: 680px;
+  position: absolute;
+  left: -100px;
+  top: 80px;
+  height: 800px;
   z-index: 2;
-  opacity: 0.8;
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .dica {

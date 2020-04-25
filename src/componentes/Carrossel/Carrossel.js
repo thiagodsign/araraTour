@@ -1,14 +1,9 @@
 import React, { Component } from "react";
 import "./Carrossel.scss";
 import FeatherIcon from "feather-icons-react"
-import Img1 from "../../imagens/banners/img1.jpg"
-import Img2 from "../../imagens/banners/img2.jpg"
-import Img3 from "../../imagens/banners/img3.jpg"
-import Img4 from "../../imagens/banners/img4.jpg"
-import Img5 from "../../imagens/banners/img5.jpg"
-import Img6 from "../../imagens/banners/img6.jpg"
+import banners from "./Banners"
 
-class Carrossel extends Component {
+export default class Carrossel extends Component {
   componentDidMount() {
     const carrossel = document.querySelector('.carrossel');
     const container = carrossel.querySelector('.carrossel-container');
@@ -63,8 +58,6 @@ class Carrossel extends Component {
 
 
   render() {
-    let banners = [Img1, Img2, Img3, Img4, Img5, Img6];
-
     return (
       <div className="carrossel__container">
         <div className="carrossel">
@@ -73,19 +66,19 @@ class Carrossel extends Component {
           </div>
           <div className="carrossel-next">
             <FeatherIcon icon="chevron-right" />
-
           </div>
+
           <ul className="carrossel-pagination">
-            {banners.map((img) => {
-              return (<li id={toString(img)} className="carrossel-bullet"></li>)
+            {banners.map((banner) => {
+              return (<li id={toString(banner.imagem)} className="carrossel-bullet"></li>)
             })}
           </ul>
 
           <ul className="carrossel-container">
-            {banners.map((img) => {
+            {banners.map((banner) => {
               return (<li className="carrossel-item">
                 <div className="item">
-                  <img className="banner" src={img} />
+                  <img className="banner" src={banner.imagem} alt="Imagem do banner" />
                 </div>
               </li>)
             })}
@@ -95,5 +88,3 @@ class Carrossel extends Component {
     );
   }
 }
-
-export default Carrossel;
