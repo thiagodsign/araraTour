@@ -8,32 +8,22 @@ import Img6 from "../../imagens/banners/img6.jpg";
 const banners = [
   {
     titulo: "Buenos Aires",
-    texto: `Teste de texto Teste de textoTeste de texto Teste de texto Teste de texto Teste de texto Teste de texto`,
+    texto: `Conheça Buenos Aires de uma maneira incrível. Passeio em veículos particulares por 5h.`,
     imagem: Img1,
   },
   {
-    titulo: "Buenos Aires",
-    texto: `Teste de texto Teste de textoTeste de texto Teste de texto Teste de texto Teste de texto Teste de texto`,
     imagem: Img2,
   },
   {
-    titulo: "Buenos Aires",
-    texto: `Teste de texto Teste de textoTeste de texto Teste de texto Teste de texto Teste de texto Teste de texto`,
     imagem: Img3,
   },
   {
-    titulo: "Buenos Aires",
-    texto: `Teste de texto Teste de textoTeste de texto Teste de texto Teste de texto Teste de texto Teste de texto`,
     imagem: Img4,
   },
   {
-    titulo: "Buenos Aires",
-    texto: `Teste de texto Teste de textoTeste de texto Teste de texto Teste de texto Teste de texto Teste de texto`,
     imagem: Img5,
   },
   {
-    titulo: "Buenos Aires",
-    texto: `Teste de texto Teste de textoTeste de texto Teste de texto Teste de texto Teste de texto Teste de texto`,
     imagem: Img6,
   },
 ];
