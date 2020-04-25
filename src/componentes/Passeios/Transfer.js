@@ -1,24 +1,42 @@
-import React, { Component } from "react"
-import Cartao from "../Cartao/Cartao"
-import ImagemBanner from "../../imagens/banner1.jpg"
+import React, { Component } from "react";
+import Cartao from "../Cartao/Cartao";
+import ImagemBanner from "../../imagens/banner1.jpg";
 import "./Passeios.scss";
 import Dialogo from "../Dialogo/Dialogo";
 import Botao from "../Botao/Botao";
 import { fecharDialogo } from "../Dialogo/DialogoConfiguracao";
-import { pacotesTransfer, pessoas } from './dadosTransfer'
+import { pacotesTransfer, pessoas } from "./dadosTransfer";
 
 export default class PasseiosVan extends Component {
   constructor(props) {
     super(props);
-    this.handleChange = this.handleChange.bind(this);
+    this.state = {
+      quantidadeDePessoas: 1,
+      data: "",
+      origem: "",
+      numeroDoVoo: "20",
+      companhiaAerea: "",
+      hotel: "",
+      nomeCompleto: "",
+      whatsapp: "",
+    };
+
+    this.handleChange = this.handleInputChange.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event) {
-    this.setState({ value: event.target.value, preco: event.target.preco });
+  handleInputChange(event) {
+    const target = event.target;
+    const value = target.type === "checkbox" ? target.checked : target.value;
+    const name = target.name;
+
+    this.setState({
+      [name]: value,
+    });
   }
 
   componentDidMount() {
-    const containerPasseios = document.querySelector('.passeios');
+    const containerPasseios = document.querySelector(".passeios");
     containerPasseios.focus();
   }
 
@@ -30,7 +48,11 @@ export default class PasseiosVan extends Component {
             <div className="grade__coluna">
               <div className="mensagem">
                 <h2 className="mensagem__titulo">Cliente Arara Turismo</h2>
-                <p className="mensagem__texto">É quem está colocando em seu carrinho de compras qualquer passeio em veículo conosco. Não incluso para shows de tangos e outros tipos de passeio na cidade.</p>
+                <p className="mensagem__texto">
+                  É quem está colocando em seu carrinho de compras qualquer
+                  passeio em veículo conosco. Não incluso para shows de tangos e
+                  outros tipos de passeio na cidade.
+                </p>
               </div>
             </div>
           </div>
@@ -39,18 +61,15 @@ export default class PasseiosVan extends Component {
             <div className="grade__coluna">
               <label>Nº de pessoas</label>
               <select className="select" id="quantidadeDePessoasTransfer">
-                {pessoas.map(pessoa => {
-                  return (
-                    <option value={`teste`}>
-                      {pessoa.quantidade}
-                    </option>
-                  )
-                })};
+                {pessoas.map((pessoa) => {
+                  return <option value={`teste`}>{pessoa.quantidade}</option>;
+                })}
+                ;
               </select>
             </div>
 
             <div className="grade__coluna grade__coluna_alinhar-vertical-centro">
-              <h3>R$80/Pessoa</h3>
+              <h3>R$80/Pessoa {this.state.data}</h3>
             </div>
           </div>
 
@@ -65,9 +84,7 @@ export default class PasseiosVan extends Component {
             <div className="grade__coluna">
               <label>Origem / Destino </label>
               <select className="select">
-                <option>
-                  Coisa
-                </option>
+                <option>Coisa</option>
               </select>
             </div>
           </div>
@@ -75,7 +92,13 @@ export default class PasseiosVan extends Component {
           <div className="grade__linha">
             <div className="grade__coluna">
               <label>Nº do voo:</label>
-              <input type="text"></input>
+              <input
+                type="text"
+                value={this.state.numeroDoVoo}
+                onChange={this.handleChange}
+                id="voo"
+              ></input>
+              <span>{this.state.numeroDoVoo}</span>
             </div>
             <div className="grade__coluna">
               <label>Companhia:</label>
@@ -109,14 +132,14 @@ export default class PasseiosVan extends Component {
           </div>
         </div>
       </form>
-    )
+    );
 
     let rodapeDoDialogo = () => (
       <>
-        <Botao metodo={() => alert('Salvei')}>Salvar</Botao>
+        <Botao metodo={() => alert("Salvei")}>Salvar</Botao>
         <Botao metodo={() => fecharDialogo()}>Cancelar</Botao>
       </>
-    )
+    );
 
     return (
       <div tabIndex="0" className="passeios">
@@ -125,21 +148,29 @@ export default class PasseiosVan extends Component {
         </div>
         <h2 className="titulo-pagina">Transfer</h2>
         <div className="passeios__conteudo">
-          {pacotesTransfer.map(pacote =>
+          {pacotesTransfer.map((pacote) => (
             <>
-              <Cartao key={pacote.id}
+              <Cartao
+                key={pacote.id}
                 duracao={pacote.duracao}
                 valores={pacote.valores}
                 info={pacote.info}
                 titulo={pacote.nome}
                 imagem={pacote.imagem}
                 descricao={pacote.descricao}
-                idDoDialogo={`transfer${pacote.id}`} />
-              <Dialogo id={`transfer${pacote.id}`} tamanho="medio" titulo="Transfer" descricao={pacote.nome}
+                idDoDialogo={`transfer${pacote.id}`}
+              />
+              <Dialogo
+                id={`transfer${pacote.id}`}
+                key={pacote.id}
+                tamanho="medio"
+                titulo="Transfer"
+                descricao={pacote.nome}
                 conteudo={conteudoDoDialogo()}
-                rodape={rodapeDoDialogo()} />
+                rodape={rodapeDoDialogo()}
+              />
             </>
-          )}
+          ))}
         </div>
       </div>
     );
