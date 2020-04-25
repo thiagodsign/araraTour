@@ -38,7 +38,7 @@ export default class PasseiosVan extends Component {
           <div className="grade__linha">
             <div className="grade__coluna">
               <label>Nº de pessoas</label>
-              <select className="select">
+              <select className="select" id="quantidadeDePessoasTransfer">
                 {pessoas.map(pessoa => {
                   return (
                     <option value={`teste`}>
@@ -113,7 +113,7 @@ export default class PasseiosVan extends Component {
 
     let rodapeDoDialogo = () => (
       <>
-        <Botao>Salvar</Botao>
+        <Botao metodo={() => alert('Salvei')}>Salvar</Botao>
         <Botao metodo={() => fecharDialogo()}>Cancelar</Botao>
       </>
     )
