@@ -1,24 +1,17 @@
 import React, { Component } from "react";
-import Cartao from "../Cartao/Cartao";
-import ImagemBanner from "../../imagens/banner1.jpg";
-import "./Passeios.scss";
-import Dialogo from "../Dialogo/Dialogo";
-import Botao from "../Botao/Botao";
-import { fecharDialogo } from "../Dialogo/DialogoConfiguracao";
+import Cartao from "../../Cartao/Cartao";
+import ImagemBanner from "../../../imagens/banner1.jpg";
+import "../Passeios.scss";
+import Dialogo from "../../Dialogo/Dialogo";
+import Botao from "../../Botao/Botao";
+import { fecharDialogo } from "../../Dialogo/DialogoConfiguracao";
 import { pacotesTransfer, pessoas } from "./dadosTransfer";
 
-export default class PasseiosVan extends Component {
+export default class Transfer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      quantidadeDePessoas: 1,
-      data: "",
-      origem: "",
       numeroDoVoo: "20",
-      companhiaAerea: "",
-      hotel: "",
-      nomeCompleto: "",
-      whatsapp: "",
     };
 
     this.handleChange = this.handleInputChange.bind(this);
@@ -28,10 +21,10 @@ export default class PasseiosVan extends Component {
   handleInputChange(event) {
     const target = event.target;
     const value = target.type === "checkbox" ? target.checked : target.value;
-    const name = target.name;
 
+    console.log(target.id);
     this.setState({
-      [name]: value,
+      numeroDoVoo: value,
     });
   }
 
@@ -62,7 +55,14 @@ export default class PasseiosVan extends Component {
               <label>Nº de pessoas</label>
               <select className="select" id="quantidadeDePessoasTransfer">
                 {pessoas.map((pessoa) => {
-                  return <option value={`teste`}>{pessoa.quantidade}</option>;
+                  return (
+                    <option
+                      key={`pessoa${pessoas.indexOf(pessoa)}`}
+                      value={`teste`}
+                    >
+                      {pessoa.quantidade}
+                    </option>
+                  );
                 })}
                 ;
               </select>
@@ -151,7 +151,7 @@ export default class PasseiosVan extends Component {
           {pacotesTransfer.map((pacote) => (
             <>
               <Cartao
-                key={pacote.id}
+                key={`cartaoId${pacote.id}`}
                 duracao={pacote.duracao}
                 valores={pacote.valores}
                 info={pacote.info}
@@ -162,7 +162,7 @@ export default class PasseiosVan extends Component {
               />
               <Dialogo
                 id={`transfer${pacote.id}`}
-                key={pacote.id}
+                key={`transfer${pacote.id}`}
                 tamanho="medio"
                 titulo="Transfer"
                 descricao={pacote.nome}

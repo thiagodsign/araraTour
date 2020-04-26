@@ -1,7 +1,7 @@
-import caminito from "../../imagens/caminito.jpg";
-import florMetalica from "../../imagens/flor-metalica.jpg";
-import zoo from "../../imagens/zoo.jpg";
-import museo from "../../imagens/museo.jpg";
+import caminito from "../../../imagens/caminito.jpg";
+import florMetalica from "../../../imagens/flor-metalica.jpg";
+import zoo from "../../../imagens/zoo.jpg";
+import museo from "../../../imagens/museo.jpg";
 
 let pacotesCarro = [
   {

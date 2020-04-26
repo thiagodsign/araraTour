@@ -1,5 +1,5 @@
-import passaporte from "../../imagens/transfer-passaport.png";
-import aviao from "../../imagens/transfer-aviao.png";
+import passaporte from "../../../imagens/transfer-passaport.png";
+import aviao from "../../../imagens/transfer-aviao.png";
 
 export let pacotesTransfer = [
   {

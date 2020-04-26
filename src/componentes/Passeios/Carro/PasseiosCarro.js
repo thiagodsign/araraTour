@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import Cartao from "../Cartao/Cartao";
-import ImagemBanner from "../../imagens/banner1.jpg";
-import "./Passeios.scss";
-import Dialogo from "../Dialogo/Dialogo";
-import Botao from "../Botao/Botao";
-import { fecharDialogo } from "../Dialogo/DialogoConfiguracao";
+import Cartao from "../../Cartao/Cartao";
+import ImagemBanner from "../../../imagens/banner1.jpg";
+import "../Passeios.scss";
+import Dialogo from "../../Dialogo/Dialogo";
+import Botao from "../../Botao/Botao";
+import { fecharDialogo } from "../../Dialogo/DialogoConfiguracao";
 import pacotesCarro from "./dadosCarros";
 
 export default class PasseiosCarro extends Component {
